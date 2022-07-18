@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+body {
+  background-image: linear-gradient(rgb(0, 111, 117), rgb(0, 40, 43));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+input {
+  border-radius: 5px;
+  padding: 5px;
+  color: black;
+  background-color: rgb(229, 254, 255);
+}
+input[type="text"] {
+  width: 100%;
+}
+.count input[type="number"] {
+  width: 100%;
+}
+.total input[type="number"] {
+  width: 20%;
+}
+.text-total {
+  background-color: red;
+  margin-left: 5px;
+  border-radius: 5px;
+}
+.button {
+  width: 100%;
+  border-radius: 10px;
+  background-color: rgba(2, 12, 14, 0.856);
+}
+.button:active {
+  background-color: rgba(119, 119, 119, 0.856);
+}
+.search input {
+  width: 40%;
+}
+
+table {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 150px;
+}
+table input:active {
+  background-color: rgba(119, 119, 119, 0.856);
+}
+table input {
+  border-radius: 10px;
+  background-color: rgba(2, 12, 14, 0.856);
+}
+td,
+th {
+  padding: 5px;
+}
+th {
+  text-transform: uppercase;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CRUDS.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div>
+        <h1 class="text-center mt-5 text-light">CRUDS</h1>
+        <p class=" text-center mt-3">PRODUCT MANAEGMENT SYSTEM</p>
+    </div>
+    <div class=" container mb-2">
+        <input type="text" id="title" placeholder="Title">
+    </div>
+    <div class="total container d-flex align-items-center mb-2">
+        <input type="number" onkeyup="getTotal()" id="price" placeholder="Price">
+        <input type="number" onkeyup="getTotal()" id="taxes" placeholder="Taxes">
+        <input type="number" onkeyup="getTotal()" id="ads" placeholder="Ads">
+        <input type="number" onkeyup="getTotal()" id="discount" placeholder="Discount">
+        <p id="parent_total" class="text-total mt-3 p-1 align ">Total: <span id="total"></span></p>
+    </div>
+    <div class=" count container mb-2">
+        <input type="number" id="count" placeholder="Count">
+    </div>
+    <div class=" container mb-2 mt-3">
+        <input type="text" id="category" placeholder="Category">
+    </div>
+    <div class=" container mb-2 mt-3">
+        <input class=" button text-center text-light p-1 " id="create" type="submit" value="Create">
+    </div>
+    <div class=" container mb-2 mt-3">
+        <input onfocusout="unfocus()" onkeyup="search_data(this.value.toLowerCase())" type="text" id="search"
+            placeholder="Search">
+    </div>
+    <div class=" search justify-content-between d-flex container mb-2 mt-3">
+        <input onclick="searchitem(this.id)" class="  button text-center text-light p-1 " id="search_titele"
+            type="submit" value="Search By Titele">
+        <input onclick="searchitem(this.id)" class=" button text-center text-light p-1 " id="Search_category"
+            type="submit" value="Search By Category">
+    </div>
+    <div id="div_delete_all" class=" container mb-2 mt-3">
+        <!-- <input class=" button text-center text-light p-1 " id="delete_all" type="submit" value="Delete all ()"> -->
+    </div>
+    <div>
+        <table class="container  mt-3 ">
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Taxes</th>
+                <th>Ads</th>
+                <th>Total</th>
+                <th>Category</th>
+                <th>Ubdate</th>
+                <th>Delete</th>
+            </tr>
+            <tbody id="tablebody">
+
+            </tbody>
+
+
+        </table>
+    </div>
+
+
+
+    <script src="CRUDS.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+</body>
+
+</html>
